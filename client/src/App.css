@@ -1,0 +1,15 @@
+.grade-container {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grades-container {
+  border: 2px solid black;
+  padding: 30px 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
