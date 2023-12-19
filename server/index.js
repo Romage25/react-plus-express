@@ -14,9 +14,9 @@ app.get("/api/users", (req, res) => {
 app.post("/api/users/", (req, res) => {
   const data = JSON.parse(fs.readFileSync("./data/data.json", "utf-8"));
   const newUser = req.body;
-  newUser.id = data.users.length + 1;
+  newUser.id = data.id_count + 1;
   data.users.push(newUser);
-  fs.writeFileSync("./data/data.json", JSON.stringify(data, null, 2));
+  fs.writeFileSync("./data/data.json", JSON.stringify({...data, "id_count": data.id_count + 1}, null, 2));
   res.json(newUser);
 });
 
